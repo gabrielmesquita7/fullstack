@@ -1,5 +1,4 @@
 using Newtonsoft.Json.Serialization;
-using MySqlConnector;
 
 var builder = WebApplication.CreateBuilder(args);
 
