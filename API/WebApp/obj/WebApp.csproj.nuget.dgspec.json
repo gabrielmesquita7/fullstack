@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "MySqlConnector": {
               "target": "Package",
               "version": "[2.3.6, )"

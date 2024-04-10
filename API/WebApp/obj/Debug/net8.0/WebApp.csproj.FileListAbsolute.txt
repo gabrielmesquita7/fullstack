@@ -37,3 +37,5 @@
 /home/gabriel/Área de Trabalho/fullstack/API/WebApp/bin/Debug/net8.0/MySqlConnector.dll
 /home/gabriel/Área de Trabalho/fullstack/API/WebApp/bin/Debug/net8.0/Newtonsoft.Json.dll
 /home/gabriel/Área de Trabalho/fullstack/API/WebApp/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/home/gabriel/Área de Trabalho/fullstack/API/WebApp/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/home/gabriel/Área de Trabalho/fullstack/API/WebApp/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll

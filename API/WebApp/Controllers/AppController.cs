@@ -8,9 +8,10 @@ namespace WebApp.Controllers
     public class AppController : ControllerBase
     {
         [HttpGet]
-        public string Get()
+        [Route("Teste")]
+        public JsonResult Teste()
         {
-            return "Hello World!";
+            return new JsonResult("Teste");
         }
     }
 }

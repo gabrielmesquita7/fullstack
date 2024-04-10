@@ -18,22 +18,17 @@ var app = builder.Build();
 //Enable CORS
 app.UseCors(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
-string connstr = "Server=localhost; User ID=root; Password=gabrielmp123; Database=testezin";
-using var cn = new MySqlConnection(connstr);
-cn.Open();
-String query = "SELECT * FROM notes";
-using var cmnd = new MySqlCommand(query, cn);
-using var reader = cmnd.ExecuteReader();
-
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseAuthentication();
 
+app.MapControllers();
 
 app.Run();
 
