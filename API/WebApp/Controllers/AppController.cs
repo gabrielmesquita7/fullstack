@@ -16,7 +16,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        [Route("Teste")]
+        [Route("GetNodes")]
         public JsonResult GetNodes()
         {
             string query = "SELECT * FROM notes";
@@ -38,9 +38,9 @@ namespace WebApp.Controllers
         }
         [HttpPost]
         [Route("Insert")]
-        public JsonResult InsertNodes([FromForm] string newNotes)
+        public JsonResult Insert([FromForm] string newNotes)
         {
-            string query = "INSERT INTO notes VALUES (007,@newNotes)";
+            string query = "INSERT INTO notes (description) VALUES (@newNotes)";
             DataTable dt = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
             MySqlDataReader myReader;
@@ -58,9 +58,9 @@ namespace WebApp.Controllers
             }
             return new JsonResult("Inserido com sucesso");
         }
-        [HttpPost]
+        [HttpDelete]
         [Route("Delete")]
-        public JsonResult DeleteNodes([FromForm] string id)
+        public JsonResult Delete(int id)
         {
             string query = "DELETE FROM notes WHERE id = @id";
             DataTable dt = new DataTable();
